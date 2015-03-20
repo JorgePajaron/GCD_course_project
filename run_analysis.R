@@ -56,5 +56,5 @@ names(data)<-gsub("\\()","",names(data))
 dmelt<-melt(data,id.vars=c("subject","activity"))
 newdata<-dcast(dmelt,subject+activity~variable,mean)
 
-write.table(newdata,file="newdata.txt",col.names=T)
+write.table(newdata,file="newdata.txt",col.names=T,row.names=F)
 
