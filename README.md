@@ -21,4 +21,4 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * Download the data for the project.
 * Unzip where you want.
 * set working directory "UCI HAR Dataset"
-* Source run_analysis.R
+* Save run_analysis.R in that directory and Source("run_analysis.R")

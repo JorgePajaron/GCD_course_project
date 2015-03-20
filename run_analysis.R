@@ -6,8 +6,9 @@
 
 #Unzip the files and set working directory "UCI HAR Dataset"
 
-library(reshape2)
 library(plyr)
+library(dplyr)
+library(reshape2)
 
 #read Activity files
 ActivityTest<-read.table("./test/Y_test.txt")
@@ -55,5 +56,5 @@ names(data)<-gsub("\\()","",names(data))
 dmelt<-melt(data,id.vars=c("subject","activity"))
 newdata<-dcast(dmelt,subject+activity~variable,mean)
 
-write.table(newdata,file="newdata.txt",row.names=F)
+write.table(newdata,file="newdata.txt",col.names=T)
 
